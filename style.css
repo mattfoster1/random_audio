@@ -10,20 +10,30 @@ body {
   background-color: lightblue; }
 
 .cont1 {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex; }
+
+
+.cont1 {
 	position: absolute;
 	width: 100%;
 	bottom: 0;
-	transform: rotate(180deg); }
+	transform: rotate(180deg);
+	flex-direction: row;
+	justify-content: space-between; }
 
 .row1 {
 	bottom: 0; }
 
 .mf_column {
-	/*max-height: 95vh;*/
 	padding-left: 2px;
 	padding-right: 5px;
 	overflow: hidden;
-	transition: height 1s ease-out; }
+	transition: height 1s ease-out;
+	width: 3%; }
 
 .redPart {
 	background-color: red;

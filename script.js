@@ -11,7 +11,7 @@ var start = function() {
 	alterations();
 	sizing();
 	// alterations();
-	main = setInterval(function(){ sizing(); }, beat); // this needs to be randomised for the beat
+	// main = setInterval(function(){ sizing(); }, beat); // this needs to be randomised for the beat
 
 	if (window.innerHeight > window.innerWidth) {
 		orientation = "portrait";
@@ -44,23 +44,8 @@ var sizing = function() { //used to calculate height
 	}
 }
 
-// var colouring = function() {
+// Tasks: 
 
-// 	var middle = window.innerHeight / 3;
-// 	var top = (window.innerHeight * 2) / 3;
-// 	console.log(top);
-	
-// 	if (total_height[n] < middle) {
-// 		console.log("bottom")
-// 		// $(".column" + (n+1) + " .col_core").css("background-color", "lightgreen");
-// 		$(".column" + (n+1) + " .col_core").css("background", "linear-gradient(green, yellow, red)");
-// 	}
-// 	if (total_height[n] >= middle) {
-// 		console.log("middle")
-// 		$(".column" + (n+1) + " .col_core").css("background-color", "goldenrod");
-// 	}
-//  	if (total_height[n] >= top) {
-// 		console.log("top");
-// 		$(".column" + (n+1) + " .col_core").css("background-color", "red");
-// 	}
-// }
+// 1. set a totalColumnWidth for each column. Make is an easily changed var
+// 2. divide totatColumnWidth by window.innerWidth to get total number of columns
+// 3. use a loop with totalColumns.length as limit to generate new columns
