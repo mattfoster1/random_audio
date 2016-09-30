@@ -29,11 +29,10 @@ body {
 	bottom: 0; }
 
 .mf_column {
-	padding-left: 2px;
-	padding-right: 5px;
+	padding: 2px;
 	overflow: hidden;
 	transition: height 1s ease-out;
-	width: 3%; }
+	width: 30px; }
 
 .redPart {
 	background-color: red;
