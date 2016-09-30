@@ -18,18 +18,20 @@ body {
 .redPart {
 	background-color: red;
 	border-bottom: solid 1px black;
+	transition: height 0.4s ease-out;
 }
 
 .amberPart {
 	background-color: goldenrod;
+	transition: height 0.3s ease-out;
 }
 
 .greenPart {
 	background-color: green;
+	transition: height 0.1s ease-out;
 }
 
 .segment {
-	transition: height 0.3s ease-out;
 	width: 100%;
 	border-left: solid 1px black;
 	border-right: solid 1px black;
