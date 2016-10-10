@@ -7,16 +7,7 @@ body, html {
   height: 100%; }
 
 body {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: lightblue;
-	overflow-x: hidden; }
-
-.mf_main {
-	margin-top: 100px;
-	/*position: relative;*/
-	height: auto;}
+  background-color: lightblue; }
 
 .cont1, #controls, .tempoBtn {
 	display: -webkit-box;
@@ -65,7 +56,8 @@ body {
 #controls {
 	margin: auto;
 	width: 620px;
-	margin-top: 20%; }
+	margin-top: 20%;
+}
 
 .tempoBtn {
 	width: 300px;
@@ -79,25 +71,19 @@ body {
 	align-items: center;
 	font: bold 40px 'Shanti', sans-serif;
 	transition: all .3s ease-out;
-	-webkit-user-select: none; }
+}
 
 .tempoBtn:hover {
 	border-color: black;
 	color: black;
-	cursor: pointer; }
+	cursor: pointer;
+}
 
 button {
 	position: absolute;
-	top: 0; }
-
-#menuCont {
-	position: absolute;
-	top: 0px; }
-
-#menu {
-	height: 100vh;
 	top: 0;
-	padding-top: 100px; }
+}
+
 
 /*.col_core {
 	width: 100%;

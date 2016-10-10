@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="frameworks/jquery-2.2.0.min.js"></script>
+		<script src="script.js"></script>
+		<script src="frameworks/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<link href="frameworks/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+		<link href="frameworks/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Flamenco|Secular+One|Shanti" rel="stylesheet">
+		
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+		<link rel="stylesheet" type="text/css" href="style.css" title="default">
+		<title>Random Audio</title>
+	</head>
+	
+	<!-- <body onload="abtCont_Expand();" onscroll="headerHider()"> -->
+	<body onload="start()">
+		<button onclick="clearInterval(main)">Stop</button>
+		<div id="controls">
+			<div onclick="upTempo()" class="upTempo tempoBtn">Up Tempo</div>
+			<div onclick="downTempo()" class="downTempo tempoBtn">Down Tempo</div>
+		</div>
+		<div class="cont1">
+		</div> 
+	</body>
+</html>
