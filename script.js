@@ -13,7 +13,7 @@ var start = function() {
 	alterations();
 	sizing();
 	// alterations();
-	main = setInterval(function(){ sizing(); }, beat); // this needs to be randomised for the beat
+	// main = setInterval(function(){ sizing(); }, beat); // this needs to be randomised for the beat
 
 	if (window.innerHeight > window.innerWidth) {
 		orientation = "portrait";

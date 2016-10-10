@@ -78,13 +78,21 @@ body {
 	justify-content: center;
 	align-items: center;
 	font: bold 40px 'Shanti', sans-serif;
-	transition: all .3s ease-out;
+	-webkit-transition: all .3s ease-out;
 	-webkit-user-select: none; }
 
 .tempoBtn:hover {
 	border-color: black;
 	color: black;
 	cursor: pointer; }
+
+.tempoBtn:active {
+	-webkit-transition: none;
+	/*border: solid 2px 5px 5px 2px #90c5d6;*/
+	border: solid 5px #749eab;
+	color: #749eab;
+	box-shadow: 3px 3px 3px gray;
+}
 
 button {
 	position: absolute;
