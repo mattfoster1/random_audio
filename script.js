@@ -2,7 +2,7 @@ var n;
 var redPart, redPart_CS, amberPart, greenPart, main, orientation;
 var total_height = [];
 // var beat = Math.random() * 3000;
-var beat = 100;
+var beat = 80;
 var amber_boundary = Math.floor((window.innerHeight * 1) / 2);
 var red_boundary = Math.floor((window.innerHeight * 2) / 3);
 var setup = 1;
@@ -53,11 +53,14 @@ var setup = function() {
 var sizing = function() { //used to calculate height
 
 	for (n=0; n < greenPart.length; n++) {
-		if (n >= 2) { // correlates height with previous two columns' height
+		if (n >= 3) { // correlates height with previous two columns' height
 			var oneColBehind = parseInt(total_height[(n-1)]);
 			var twoColBehind = parseInt(total_height[(n-2)]);
+			var threeColBehind = parseInt(total_height[(n-3)]);
 			var prev_mean = (oneColBehind + twoColBehind) / 2;
-			total_height[n] = Math.floor((Math.random() + 0.5) * prev_mean);
+			total_height[n] = Math.floor((Math.random() + 0.5) * prev_mean); //assigns height to column
+		} else if (n == 2) {
+			total_height[2] = Math.floor(parseInt(total_height[0]) * (Math.random() + 0.5));
 		} else if (n == 1) {
 			total_height[1] = Math.floor(parseInt(total_height[0]) * (Math.random() + 0.5));
 		} else { //if first column
@@ -68,8 +71,30 @@ var sizing = function() { //used to calculate height
 	}
 }
 
-// Tasks: 
+var upTempo = function() {
+	clearInterval(main);
+	var tDur = $(".mf_column").css("transition-duration");
+	if (parseFloat(tDur) > 0.2 && beat > 20) {
+		tDur = parseFloat(tDur) - (parseFloat(tDur) /5);
+		$(".mf_column").css("transition-duration", tDur + "s");
+		beat = Math.floor(beat - (beat / 4));
+		console.log(beat);
+		console.log(tDur);
+	}
+	console.log("upTempo");
+	main = setInterval(function(){ sizing(); }, beat); // this needs to be randomised for the beat
+}
 
-// 1. set a totalColumnWidth for each column. Make is an easily changed var
-// 2. divide totalColumnWidth by window.innerWidth to get total number of columns
-// 3. use a loop with totalColumns.length as limit to generate new columns
+var downTempo = function() {
+	clearInterval(main);
+	var tDur = $(".mf_column").css("transition-duration");
+	if (parseFloat(tDur)) {
+		tDur = parseFloat(tDur) + (parseFloat(tDur) /5);
+		$(".mf_column").css("transition-duration", tDur + "s");
+		beat = Math.floor(beat + (beat / 3));
+		console.log(beat);
+		console.log(tDur);
+	}
+	console.log("downTempo");
+	main = setInterval(function(){ sizing(); }, beat); // this needs to be randomised for the beat
+}

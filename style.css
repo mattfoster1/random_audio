@@ -9,7 +9,7 @@ body, html {
 body {
   background-color: lightblue; }
 
-.cont1 {
+.cont1, #controls, .tempoBtn {
 	display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -23,7 +23,8 @@ body {
 	bottom: 0;
 	transform: rotate(180deg);
 	flex-direction: row;
-	justify-content: space-between; }
+	justify-content: space-between;
+	pointer-events: none; }
 
 .row1 {
 	bottom: 0; }
@@ -31,7 +32,10 @@ body {
 .mf_column {
 	padding: 2px;
 	overflow: hidden;
-	transition: height 1s ease-out;
+	-webkit-transition: height .5s ease-out;
+    -moz-transition: 	height .5s ease-out;
+    -o-transition:		height .5s ease-out;
+	transition: 		height .5s ease-out;
 	width: 30px; }
 
 .redPart {
@@ -48,6 +52,37 @@ body {
 
 .segment {
 	width: 100%; }
+
+#controls {
+	margin: auto;
+	width: 620px;
+	margin-top: 20%;
+}
+
+.tempoBtn {
+	width: 300px;
+	height: 80px;
+	white-space: nowrap;
+	border: solid 5px #90c5d6;
+	color: #90c5d6;
+	padding: 20px;
+	margin: 5px;
+	justify-content: center;
+	align-items: center;
+	font: bold 40px 'Shanti', sans-serif;
+	transition: all .3s ease-out;
+}
+
+.tempoBtn:hover {
+	border-color: black;
+	color: black;
+	cursor: pointer;
+}
+
+button {
+	position: absolute;
+	top: 0;
+}
 
 
 /*.col_core {

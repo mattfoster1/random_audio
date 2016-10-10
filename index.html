@@ -8,6 +8,7 @@
 		<script src="frameworks/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<link href="frameworks/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
 		<link href="frameworks/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Flamenco|Secular+One|Shanti" rel="stylesheet">
 		
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 
@@ -17,68 +18,12 @@
 	
 	<!-- <body onload="abtCont_Expand();" onscroll="headerHider()"> -->
 	<body onload="start()">
-		<div class="cont1">
-<!-- 			<div class="mf_column column1">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column2">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column3">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column4">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column5">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column6">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column7">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column8">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column9">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column10">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column11">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div>
-			<div class="mf_column column12">
-				<div class="greenPart segment"></div>
-				<div class="amberPart segment"></div>
-				<div class="redPart segment"></div>
-			</div> -->
-		</div> 
 		<button onclick="clearInterval(main)">Stop</button>
+		<div id="controls">
+			<div onclick="upTempo()" class="upTempo tempoBtn">Up Tempo</div>
+			<div onclick="downTempo()" class="downTempo tempoBtn">Down Tempo</div>
+		</div>
+		<div class="cont1">
+		</div> 
 	</body>
 </html>
