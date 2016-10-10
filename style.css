@@ -99,6 +99,10 @@ button {
 	top: 0;
 	padding-top: 100px; }
 
+#footerRHS {
+	width: 450px;
+}
+
 /*.col_core {
 	width: 100%;
 	height: 100%;
