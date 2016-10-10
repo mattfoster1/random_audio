@@ -53,14 +53,11 @@ var setup = function() {
 var sizing = function() { //used to calculate height
 
 	for (n=0; n < greenPart.length; n++) {
-		if (n >= 3) { // correlates height with previous two columns' height
+		if (n >= 2) { // correlates height with previous two columns' height
 			var oneColBehind = parseInt(total_height[(n-1)]);
 			var twoColBehind = parseInt(total_height[(n-2)]);
-			var threeColBehind = parseInt(total_height[(n-3)]);
 			var prev_mean = (oneColBehind + twoColBehind) / 2;
 			total_height[n] = Math.floor((Math.random() + 0.5) * prev_mean); //assigns height to column
-		} else if (n == 2) {
-			total_height[2] = Math.floor(parseInt(total_height[0]) * (Math.random() + 0.5));
 		} else if (n == 1) {
 			total_height[1] = Math.floor(parseInt(total_height[0]) * (Math.random() + 0.5));
 		} else { //if first column
@@ -73,11 +70,11 @@ var sizing = function() { //used to calculate height
 
 var upTempo = function() {
 	clearInterval(main);
-	var tDur = $(".mf_column").css("transition-duration");
+	var tDur = $(".mf_column").css("transition-duration"); // this is no longer relevant. May be revived later
 	if (parseFloat(tDur) > 0.2 && beat > 20) {
 		tDur = parseFloat(tDur) - (parseFloat(tDur) /5);
-		$(".mf_column").css("transition-duration", tDur + "s");
-		beat = Math.floor(beat - (beat / 4));
+		// $(".mf_column").css("transition-duration", tDur + "s"); 
+		beat = Math.floor(beat - (beat / 8));
 		console.log(beat);
 		console.log(tDur);
 	}
@@ -87,10 +84,10 @@ var upTempo = function() {
 
 var downTempo = function() {
 	clearInterval(main);
-	var tDur = $(".mf_column").css("transition-duration");
+	var tDur = $(".mf_column").css("transition-duration"); // this is no longer relevant. May be revived later
 	if (parseFloat(tDur)) {
-		tDur = parseFloat(tDur) + (parseFloat(tDur) /5);
-		$(".mf_column").css("transition-duration", tDur + "s");
+		tDur = parseFloat(tDur) + (parseFloat(tDur) /8);
+		// $(".mf_column").css("transition-duration", tDur + "s");
 		beat = Math.floor(beat + (beat / 3));
 		console.log(beat);
 		console.log(tDur);
